@@ -22,6 +22,7 @@ public:
 class TextAnimated : public Object2D
 {
 public:
+    TextAnimated();
     void Draw();
     void PushCharacter(std::string character);
     void UpdateCharacterPositions();
@@ -32,4 +33,6 @@ public:
     Font fontAlternative;
     std::vector<Font> additionalFonts;
     Vector2 shakeDirection;
+    float space;
+    Sound typing;
 };

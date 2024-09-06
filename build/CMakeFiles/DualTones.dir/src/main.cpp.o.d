@@ -45,7 +45,7 @@ CMakeFiles/DualTones.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
  /home/funnysneko/dev/DualTones1\ (copy\ 1)/src/object2D.h \
- /usr/local/include/raylib.h \
+ /home/funnysneko/dev/DualTones1\ (copy\ 1)/include/raylib/raylib.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/char_traits.h \

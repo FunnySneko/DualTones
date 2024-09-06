@@ -2,7 +2,7 @@
 
 void Game::Update()
 {
-    textAnimated.position = {100,100};
+    textAnimated.position = {float(GetScreenWidth())/2,float(GetScreenHeight())/2};
     float currentTime = GetTime();
     if(currentTime - lastTimeUpdated >= 0.1)
     {

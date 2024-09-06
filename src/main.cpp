@@ -8,12 +8,14 @@ int main()
     SetTargetFPS(60);
 
     InitWindow(1280,720,"NICEGG");
+    InitAudioDevice();
     while(!WindowShouldClose())
     {
         BeginDrawing();
         ClearBackground(BLACK);
 
         game.Update();
+        std::cout << GetApplicationDirectory() << std::endl;
 
         EndDrawing();
     }

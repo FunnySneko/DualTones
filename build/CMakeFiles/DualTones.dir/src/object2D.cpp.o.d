@@ -2,7 +2,7 @@ CMakeFiles/DualTones.dir/src/object2D.cpp.o: \
  /home/funnysneko/dev/DualTones1\ (copy\ 1)/src/object2D.cpp \
  /usr/include/stdc-predef.h \
  /home/funnysneko/dev/DualTones1\ (copy\ 1)/src/object2D.h \
- /usr/local/include/raylib.h \
+ /home/funnysneko/dev/DualTones1\ (copy\ 1)/include/raylib/raylib.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

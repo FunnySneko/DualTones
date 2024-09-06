@@ -7,7 +7,12 @@ SingleCharacter::SingleCharacter(std::string character)
 
 void SingleCharacter::Draw()
 {
-    DrawTextEx(GetFontDefault(),character.c_str(),position,GetFontDefault().baseSize,0,WHITE);
+    DrawTextEx(GetFontDefault(),character.c_str(),position,14,0,WHITE);
+}
+
+TextAnimated::TextAnimated()
+{
+    typing = LoadSound("../assets/switch.mp3");
 }
 
 void TextAnimated::Draw()
@@ -26,6 +31,7 @@ void TextAnimated::PushCharacter(std::string character)
     }
     else
     {
+        PlaySound(typing);
         characters.push_back(SingleCharacter(character));
         UpdateCharacterPositions();
     }
@@ -33,19 +39,20 @@ void TextAnimated::PushCharacter(std::string character)
 
 void TextAnimated::UpdateCharacterPositions()
 {
-    float textWidth = MeasureTextEx(GetFontDefault(),displayedLine.c_str(),GetFontDefault().baseSize,2).x;
-    float space = 0;
-    shakeDirection = {float(GetRandomValue(-1,1)),float(GetRandomValue(-1,1))};
+    float textWidth = MeasureTextEx(GetFontDefault(),displayedLine.c_str(),14,2).x;
+    space = 0;
 
     for(auto& character : characters)
     {
-        character.position.x = position.x + space + shakeDirection.x;
+        shakeDirection = {float(GetRandomValue(-1,1)),float(GetRandomValue(-1,1))};
+        character.position.x = position.x + space + shakeDirection.x - textWidth/2;
         character.position.y = position.y + shakeDirection.y;
-        space += MeasureTextEx(GetFontDefault(),character.character.c_str(),GetFontDefault().baseSize,0).x + 2; 
+        space += MeasureTextEx(GetFontDefault(),character.character.c_str(),GetFontDefault().baseSize,0).x + 6; 
     }
 }
 
 void TextAnimated::FlushLine()
 {
     characters.clear();
+    displayedLine = "";
 }
