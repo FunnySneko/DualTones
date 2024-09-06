@@ -11,11 +11,11 @@ add_executable(DualTones ${SOURCES})
 
 target_link_libraries(DualTones raylib)
 
-find_package(Python3 COMPONENTS Development REQUIRED)
+#find_package(Python3 COMPONENTS Development REQUIRED)
 
-include_directories(${Python3_INCLUDE_DIRS})
+#include_directories(${Python3_INCLUDE_DIRS})
 
-target_link_libraries(DualTones ${Python3_LIBRARIES})
+#target_link_libraries(DualTones ${Python3_LIBRARIES})
 
 if (UNIX)
     target_link_libraries(DualTones GL m pthread dl)
