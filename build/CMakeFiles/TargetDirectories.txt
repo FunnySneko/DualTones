@@ -1,0 +1,3 @@
+/home/funnysneko/dev/DualTones1 (copy 1)/build/CMakeFiles/DualTones.dir
+/home/funnysneko/dev/DualTones1 (copy 1)/build/CMakeFiles/edit_cache.dir
+/home/funnysneko/dev/DualTones1 (copy 1)/build/CMakeFiles/rebuild_cache.dir
