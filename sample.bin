@@ -1,0 +1,15 @@
+STARTING_POINT
+
+DATA
+
+SCENARIO "Deez nuts"
+
+DIALOGUE_MANAGER 1
+FONT "uwu.ttf"
+ALTERNATIVE_FONT "uwu.ttf"
+"123"
+"123"
+"123"
+"123"
+
+GOTO chapter_1.script

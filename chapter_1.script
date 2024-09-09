@@ -1,0 +1,34 @@
+LINEAR_SCRIPT
+SCENE 1
+BACKGROUND "path/to/image.png"
+
+SCENE 2
+ANIMED_BACKGROUND "directory" 69.420
+
+DIALOGUE 1
+DIALOGUE_MANAGER_ID 1
+ALTERNATIVE_FONT
+"Cooking is a wonderful and creative activity that can bring people together and satisfy the senses.|Whether you're whipping up a quick weeknight meal or preparing a gourmet feast, the process is both enjoyable and rewarding.|The key to great cooking is to experiment with different ingredients and techniques to find what works best for you.|From mastering the perfect pasta sauce to baking a delicious loaf of bread, there’s always something new to learn and discover in the kitchen.|"
+
+CYCLE_SCRIPT
+CYCLATION_POINT 1
+BRANCH 1
+DIALOGUE 1
+DIALOGUE_MANAGER_ID 1
+ALTERNATIVE_FONT
+"Cooking is a wonderful and creative activity that can bring people together and satisfy the senses.|Whether you're whipping up a quick weeknight meal or preparing a gourmet feast, the process is both enjoyable and rewarding.|The key to great cooking is to experiment with different ingredients and techniques to find what works best for you.|From mastering the perfect pasta sauce to baking a delicious loaf of bread, there’s always something new to learn and discover in the kitchen.|"
+RETURN_TO 1
+
+BRANCH 2
+DIALOGUE 1
+DIALOGUE_MANAGER_ID 1
+ALTERNATIVE_FONT
+"Cooking is a wonderful and creative activity that can bring people together and satisfy the senses.|Whether you're whipping up a quick weeknight meal or preparing a gourmet feast, the process is both enjoyable and rewarding.|The key to great cooking is to experiment with different ingredients and techniques to find what works best for you.|From mastering the perfect pasta sauce to baking a delicious loaf of bread, there’s always something new to learn and discover in the kitchen.|"
+RETURN_TO 1
+
+BRANCH 3
+DIALOGUE 1
+DIALOGUE_MANAGER_ID 1
+ALTERNATIVE_FONT
+"Cooking is a wonderful and creative activity that can bring people together and satisfy the senses.|Whether you're whipping up a quick weeknight meal or preparing a gourmet feast, the process is both enjoyable and rewarding.|The key to great cooking is to experiment with different ingredients and techniques to find what works best for you.|From mastering the perfect pasta sauce to baking a delicious loaf of bread, there’s always something new to learn and discover in the kitchen.|"
+END_CYCLE
