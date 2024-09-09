@@ -1,21 +1,22 @@
 #include "game.h"
 #include "object2D.h"
 
-Game game;
 
 int main()
 {
-    SetTargetFPS(60);
 
-    InitWindow(1280,720,"NICEGG");
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     InitAudioDevice();
+    InitWindow(1280,720,"NICEGG");
+    SetTargetFPS(60);
+    //ToggleFullscreen();
+    Game game;
     while(!WindowShouldClose())
     {
         BeginDrawing();
-        ClearBackground(BLACK);
+        ClearBackground(WHITE);
 
         game.Update();
-        std::cout << GetApplicationDirectory() << std::endl;
 
         EndDrawing();
     }

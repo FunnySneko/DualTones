@@ -9,7 +9,11 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 add_executable(DualTones ${SOURCES})
 
-target_link_libraries(DualTones raylib)
+set(OPENAL_INCLUDE_DIR /usr/include/AL)
+set(OPENAL_LIBRARY /usr/lib/x86_64-linux-gnu/libopenal.so)
+include_directories(${OPENAL_INCLUDE_DIR})
+
+target_link_libraries(DualTones raylib ${OPENAL_LIBRARY})
 
 #find_package(Python3 COMPONENTS Development REQUIRED)
 
