@@ -6,7 +6,8 @@
 class RenderManager
 {
 public:
-    void RenderObject2D(Object2D* object);
+    void Update();
+    void RenderObject2D(Object2D& object);
 private:
     DisplayManager* displayManager;
 };

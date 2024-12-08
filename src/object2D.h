@@ -9,10 +9,23 @@ enum class PIVOT_ALIGMENT
     LEFT_TOP,
     RIGHT_TOP,
     LEFT_BOTTOM,
-    RIGHT_BOTTOM
+    RIGHT_BOTTOM,
+    LEFT,
+    RIGHT,
+    TOP,
+    BOTTOM
 };
 
-class Object2D
+class IObject2D
+{
+public:
+
+protected:
+    Vector2 position;
+    float scale;
+};
+
+class Object2D : public IObject2D
 {
 public:
     Object2D(PIVOT_ALIGMENT pivotAligment = PIVOT_ALIGMENT::CENTER);
@@ -25,11 +38,18 @@ public:
     Vector2 GetDimensions();
     PIVOT_ALIGMENT GetPivotAligment();
 protected:
-    float scale;
     Vector2 dimensions;
 private:
     PIVOT_ALIGMENT pivotAligment;
-    Vector2 position;
+};
+
+class Object2DContainer : public IObject2D
+{
+public:
+    std::vector<IObject2D> GetObjects();
+    void AddObject(IObject2D object);
+private:
+    std::vector<IObject2D> objects;
 };
 
 class Sprite : public Object2D
@@ -44,16 +64,22 @@ protected:
 class SpriteAnimated : public Sprite
 {
 public:
-    void SetFrame();
+
 private:
     float speed;
     std::vector<Texture2D> images;
 };
 
-class Text : public Object2D
+class TextObject : public Object2D
 {
 public:
-    void SetText();
+    TextObject(std::string text);
+    void Draw(Vector2 absPosition, float absScale) override;
+    void CalculateDimensions() override;
+    void SetText(std::string text);
 private:
     std::string text;
+    Font font;
+    float fontSize;
+    float spacing;
 };

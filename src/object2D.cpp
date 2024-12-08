@@ -44,3 +44,33 @@ void Sprite::CalculateDimensions()
 {
     dimensions = {image.width * scale, image.height * scale};
 }
+
+void TextObject::Draw(Vector2 absPosition, float absScale)
+{
+    
+}
+
+void TextObject::CalculateDimensions()
+{
+    dimensions = {MeasureTextEx(font,text.c_str(),fontSize,spacing)};
+}
+
+void TextObject::SetText(std::string text)
+{
+    this->text = text;
+}
+
+std::vector<IObject2D> Object2DContainer::GetObjects()
+{
+    return objects;
+}
+
+void Object2DContainer::AddObject(IObject2D object)
+{
+    objects.push_back(object);
+}
+
+TextObject::TextObject(std::string text)
+{
+    this->text = text;
+}
